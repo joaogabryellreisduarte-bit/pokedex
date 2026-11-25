@@ -1,0 +1,411 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080812;
+    color: white;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background-image:
+        radial-gradient(circle at top, #171044, transparent 50%);
+}
+
+/* CONTAINER PRINCIPAL */
+
+.pokedex {
+    width: 100%;
+    max-width: 450px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: #11111f;
+
+    border: 2px solid #00f7ff;
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 10px #00f7ff,
+        0 0 25px rgba(0, 247, 255, 0.4),
+        inset 0 0 20px rgba(0, 247, 255, 0.08);
+}
+
+/* TÍTULO */
+
+h1 {
+    color: #00f7ff;
+    font-size: 42px;
+
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    text-shadow:
+        0 0 5px #00f7ff,
+        0 0 15px #00f7ff,
+        0 0 30px #008cff;
+}
+
+.subtitulo {
+    color: #aaa;
+    margin: 10px 0 25px;
+    letter-spacing: 2px;
+}
+
+/* PESQUISA */
+
+.pesquisa {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+
+    border: 1px solid #a100ff;
+    border-radius: 8px;
+
+    background: #080812;
+    color: white;
+
+    outline: none;
+
+    box-shadow: 0 0 8px rgba(161, 0, 255, 0.4);
+}
+
+input:focus {
+    border-color: #00f7ff;
+    box-shadow: 0 0 12px #00f7ff;
+}
+
+input::placeholder {
+    color: #777;
+}
+
+/* BOTÕES */
+
+button {
+    padding: 12px 16px;
+
+    border: 1px solid #00f7ff;
+    border-radius: 8px;
+
+    background: transparent;
+    color: #00f7ff;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #00f7ff;
+    color: #080812;
+
+    box-shadow:
+        0 0 10px #00f7ff,
+        0 0 25px #00f7ff;
+
+    transform: scale(1.05);
+}
+
+/* CARD DO POKÉMON */
+
+.pokemon-card {
+    padding: 20px;
+    border-radius: 15px;
+
+    background: #19192b;
+
+    border: 1px solid #a100ff;
+
+    box-shadow:
+        0 0 10px rgba(161, 0, 255, 0.5),
+        inset 0 0 15px rgba(161, 0, 255, 0.1);
+}
+
+/* NÚMERO */
+
+#numero {
+    text-align: right;
+
+    color: #00f7ff;
+    font-weight: bold;
+    font-size: 16px;
+
+    text-shadow: 0 0 8px #00f7ff;
+}
+
+/* IMAGEM */
+
+#imagem {
+    width: 190px;
+    height: 190px;
+
+    object-fit: contain;
+    margin: 10px auto;
+
+    filter: drop-shadow(0 0 12px #00f7ff);
+
+    transition: 0.3s;
+}
+
+#imagem:hover {
+    transform: scale(1.1);
+
+    filter: drop-shadow(0 0 20px #a100ff);
+}
+
+/* NOME */
+
+h2 {
+    color: white;
+    font-size: 28px;
+
+    text-transform: capitalize;
+
+    text-shadow:
+        0 0 8px #a100ff,
+        0 0 15px #a100ff;
+
+    margin-bottom: 15px;
+}
+
+/* TIPOS */
+
+.tipos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tipo {
+    padding: 8px 16px;
+
+    border-radius: 20px;
+
+    background: #a100ff;
+    color: white;
+
+    font-size: 13px;
+    text-transform: capitalize;
+    font-weight: bold;
+
+    box-shadow: 0 0 10px #a100ff;
+}
+
+/* ALTURA E PESO */
+
+.informacoes {
+    display: flex;
+    justify-content: space-around;
+
+    margin: 20px 0;
+}
+
+.informacoes span {
+    color: #00f7ff;
+    font-size: 14px;
+
+    text-transform: uppercase;
+}
+
+.informacoes p {
+    color: white;
+    font-size: 20px;
+
+    margin-top: 8px;
+}
+
+/* ATRIBUTOS */
+
+.atributos {
+    margin-top: 25px;
+    padding: 18px;
+
+    background: #10101c;
+
+    border: 1px solid #00f7ff;
+    border-radius: 12px;
+
+    box-shadow:
+        0 0 12px rgba(0, 247, 255, 0.2),
+        inset 0 0 12px rgba(0, 247, 255, 0.05);
+}
+
+.atributos h3 {
+    color: #00f7ff;
+
+    text-transform: uppercase;
+    font-size: 17px;
+
+    margin-bottom: 22px;
+
+    text-shadow: 0 0 8px #00f7ff;
+}
+
+/* LINHAS DOS ATRIBUTOS */
+
+.atributo {
+    display: grid;
+
+    grid-template-columns: 95px 1fr 30px;
+
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 17px;
+}
+
+.atributo:last-child {
+    margin-bottom: 0;
+}
+
+.atributo span {
+    color: #ddd;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    text-align: left;
+}
+
+.atributo strong {
+    color: #00f7ff;
+
+    font-size: 13px;
+
+    text-shadow: 0 0 6px #00f7ff;
+}
+
+/* FUNDO DA BARRA */
+
+.barra {
+    width: 100%;
+    height: 11px;
+
+    background: #29293b;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    border: 1px solid #44445a;
+}
+
+/* PROGRESSO DA BARRA */
+
+.progresso {
+    height: 100%;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #a100ff,
+        #00f7ff
+    );
+
+    box-shadow: 0 0 10px #00f7ff;
+
+    transition: width 0.6s ease;
+}
+
+/* HABILIDADES */
+
+.habilidades {
+    border-top: 1px solid #a100ff;
+
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+.habilidades h3 {
+    color: #00f7ff;
+
+    margin-bottom: 10px;
+
+    text-shadow: 0 0 8px #00f7ff;
+}
+
+.habilidades p {
+    color: #ddd;
+
+    text-transform: capitalize;
+    line-height: 1.5;
+}
+
+/* NAVEGAÇÃO */
+
+.navegacao {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 22px;
+}
+
+.navegacao button {
+    flex: 1;
+}
+
+/* MENSAGENS */
+
+#mensagem {
+    margin-top: 15px;
+
+    color: #ff3df2;
+
+    text-shadow: 0 0 8px #ff3df2;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .pokedex {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    #imagem {
+        width: 160px;
+        height: 160px;
+    }
+
+    .pesquisa {
+        flex-direction: column;
+    }
+
+    .atributo {
+        grid-template-columns: 85px 1fr 28px;
+        gap: 6px;
+    }
+
+}

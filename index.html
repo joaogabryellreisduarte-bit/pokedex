@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokédex Neon Gamer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="pokedex">
+
+        <h1>Pokédex</h1>
+
+        <p class="subtitulo">
+            Explore o mundo Pokémon!
+        </p>
+
+        <!-- PESQUISA -->
+        <div class="pesquisa">
+
+            <input
+                type="text"
+                id="nomePokemon"
+                placeholder="Digite o nome ou número..."
+            >
+
+            <button onclick="buscarPokemon()">
+                Buscar
+            </button>
+
+        </div>
+
+        <!-- CARD DO POKÉMON -->
+        <div class="pokemon-card">
+
+            <p id="numero">#001</p>
+
+            <img
+                id="imagem"
+                src=""
+                alt="Imagem do Pokémon"
+            >
+
+            <h2 id="nome">Bulbasaur</h2>
+
+            <!-- TIPOS -->
+            <div id="tipos" class="tipos"></div>
+
+            <!-- INFORMAÇÕES -->
+            <div class="informacoes">
+
+                <div>
+                    <span>Altura</span>
+                    <p id="altura">-</p>
+                </div>
+
+                <div>
+                    <span>Peso</span>
+                    <p id="peso">-</p>
+                </div>
+
+            </div>
+
+            <!-- ATRIBUTOS -->
+            <div class="atributos">
+
+                <h3>Atributos do Pokémon</h3>
+
+                <div id="listaAtributos"></div>
+
+            </div>
+
+            <!-- HABILIDADES -->
+            <div class="habilidades">
+
+                <h3>Habilidades</h3>
+
+                <p id="">-</p>
+
+            </div>
+
+        </div>
+
+        <!-- NAVEGAÇÃO -->
+        <div class="navegacao">
+
+            <button onclick="pokemonAnterior()">
+                Anterior
+            </button>
+
+            <button onclick="pokemonProximo()">
+                Próximo
+            </button>
+
+        </div>
+
+        <p id="mensagem"></p>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
